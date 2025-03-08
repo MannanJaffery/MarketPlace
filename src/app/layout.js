@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
       >
 
         <h1>hello nisarrrrr</h1>
+        <h1>hello mananan</h1>
         {children}
       </body>
     </html>
