@@ -1,11 +1,9 @@
 import React from 'react'
-
+import {FiSearch} from 'react-icons/fi'
 const Sidebar = () => {
   return (
-    <div>
-      <h1 className='text-xl font-bold'>Sidebar</h1>
-    </div>
-  )
-}
+    <div></div>
+  );
+};
 
 export default Sidebar;
