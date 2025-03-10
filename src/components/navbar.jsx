@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Navbar = () => {
   const [darkMode, setdarkMode] = useState(false)
   return (
-    <div className="bg-blue-950 text-white">
+    <div className="bg-blue-950 text-white h-16 flex items-center justify-center">
       <nav className="pt-2 flex items-center justify-center">
         <ul className="flex space-x-15">
           <li><a href="">Branding</a></li>
