@@ -17,9 +17,6 @@ const Sidebar = (userrole) => {//userrole refers to whether the user is seller o
 
 
   return (
-
-
-
     <div className='hidden sm:block sm:w-64 h-full shadow-md bg-blue-600 absolute'>
 
       {userrole==='buyer' && (

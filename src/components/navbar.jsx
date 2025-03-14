@@ -1,27 +1,31 @@
-"use client"
-import React from 'react'
-import {FiShoppingCart,FiSun,FiMoon} from "react-icons/fi";
-import { useState } from 'react';
+"use client";
+import React, { useState } from "react";
+import { FiShoppingCart, FiSun, FiMoon, FiMenu } from "react-icons/fi";
+import Link from "next/link";
 
-const Navbar = () => {
-  const [darkMode, setdarkMode] = useState(false)
+const Navbar = ({ toggleSidebar }) => {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="bg-blue-950 text-white h-16 flex items-center justify-center">
-      <nav className="pt-2 flex items-center justify-center">
-        <ul className="flex space-x-15">
-          <li><a href="">Branding</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact Us</a></li>
-          <li><a href="">Login</a></li>
-          <li><FiShoppingCart></FiShoppingCart></li>
-          <button onClick={()=>setdarkMode(!darkMode)}>
-              {darkMode?<FiMoon/>:<FiSun/>}
-          </button>
-          </ul>
-      </nav>
+    <div className="bg-blue-950 text-white h-16 flex items-center px-6 justify-between w-full">
+      <button className="md:hidden" onClick={toggleSidebar}>
+        <FiMenu size={24} />
+      </button>
+      
+      <Link href="#" className="text-xl font-bold whitespace-nowrap flex-1 md:flex-none text-center md:text-left">Branding</Link>
+      
+      <ul className="hidden md:flex items-center gap-x-6 flex-1 justify-end flex-wrap">
+        <li><Link href="#" className="whitespace-nowrap">Home</Link></li>
+        <li><Link href="#" className="whitespace-nowrap">About</Link></li>
+        <li><Link href="#" className="whitespace-nowrap">Contact Us</Link></li>
+        <li><Link href="#" className="whitespace-nowrap">Login</Link></li>
+        <li><FiShoppingCart className="cursor-pointer" /></li>
+        <button onClick={() => setDarkMode(!darkMode)} className="whitespace-nowrap">
+          {darkMode ? <FiMoon />: <FiSun />}
+        </button>
+      </ul>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
