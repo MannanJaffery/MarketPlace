@@ -33,6 +33,9 @@ const Sidebar = (userrole) => {//userrole refers to whether the user is seller o
             <Link href="#" className='block pd-4'>Category 3</Link>
           </div>
         )}
+        <Link href='#' className='block p-4 hover:bg-gray-50'>Inbox</Link>
+
+        <Link href='#' className='block p-4 hover:bg-gray-50'>Notifications</Link>
         <Link href='#' className='block p-4 hover:bg-gray-50'>Settings</Link>
         
       </div>
@@ -47,6 +50,11 @@ const Sidebar = (userrole) => {//userrole refers to whether the user is seller o
 
         <Link href='#' className='block p-4 hover:bg-gray-50'>Seller</Link>   {/*Thiss will be based on a toggle , whether the user is buyer or seller*/}
         <Link href='#' className='block p-4 hover:bg-gray-50'>Sales</Link>
+
+        <Link href='#' className='block p-4 hover:bg-gray-50'>Inbox</Link>
+
+        <Link href='#' className='block p-4 hover:bg-gray-50'>Notifications</Link>
+
         <Link href='#' className='block p-4 hover:bg-gray-50'>Settings</Link>
         
       </div>
